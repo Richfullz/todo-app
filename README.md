@@ -2,13 +2,13 @@
 ## Una aplicación de tareas moderna hecha con React, con diseño de tarjetas, filtrado y estadísticas en tiempo real.
 
 # 🔹 Funcionalidades
-##✅ Añadir tareas
-##✏️ Editar tareas directamente al hacer clic
-##✔️ Marcar tareas completadas
-##🗑️ Eliminar tareas con efecto visual
-##🔍 Filtrado: Todas / Pendientes / Completadas
-##📊 Estadísticas: Total, Pendientes y Completadas
-##🕒 Fechas visibles: Creación y última edición
+## ✅ Añadir tareas
+## ✏️ Editar tareas directamente al hacer clic
+## ✔️ Marcar tareas completadas
+## 🗑️ Eliminar tareas con efecto visual
+## 🔍 Filtrado: Todas / Pendientes / Completadas
+## 📊 Estadísticas: Total, Pendientes y Completadas
+## 🕒 Fechas visibles: Creación y última edición
 
 # 🎨 Diseño
 
