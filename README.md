@@ -104,52 +104,52 @@
 
 # 🔹 Flujo de la aplicación
 # 1️⃣ Añadir tarea
-## [ TaskForm ]
-##  ↓ onAddTask()
-## [ App.js - tasks[] ] → se actualiza el estado
-##  ↓
-## [ TaskList ]
-##  ↓
-## [ TaskItem ] → nueva tarjeta aparece con animación
+### [ TaskForm ]
+###  ↓ onAddTask()
+### [ App.js - tasks[] ] → se actualiza el estado
+###  ↓
+### [ TaskList ]
+###  ↓
+### [ TaskItem ] → nueva tarjeta aparece con animación
 
 # 2️⃣ Editar tarea
-## [ TaskItem ]
-##  ↓ click en texto
-## [ Modo edición ]
-##  ↓ enter o blur
-## [ App.js - editTask() ]
-##  ↓
-## [ TaskList ] → se actualiza el texto
+### [ TaskItem ]
+###  ↓ click en texto
+### [ Modo edición ]
+###  ↓ enter o blur
+### [ App.js - editTask() ]
+###  ↓
+### [ TaskList ] → se actualiza el texto
 
 # 3️⃣ Marcar como completada
-## [ TaskItem ]
-##  ↓ check/uncheck
-## [ App.js - toggleTask() ]
-##  ↓
-## [ TaskList ] → estilo tachado + opacidad
+### [ TaskItem ]
+###  ↓ check/uncheck
+### [ App.js - toggleTask() ]
+###  ↓
+### [ TaskList ] → estilo tachado + opacidad
 
 # 4️⃣ Eliminar tarea
-## [ TaskItem ]
-##  ↓ click en 🗑️
-## [ App.js - deleteTask() ]
-##  ↓
-## [ TaskList ] → tarjeta desaparece
+### [ TaskItem ]
+###  ↓ click en 🗑️
+### [ App.js - deleteTask() ]
+###  ↓
+### [ TaskList ] → tarjeta desaparece
 
 # 5️⃣ Filtrar tareas
-## [ TaskFilter ]
-##  ↓ cambio de filtro
-## [ App.js ]
-##   ↓
-## [ TaskList ] → muestra:
-##   🔹 Todas
-##  🔹 Pendientes
-##  🔹 Completadas
+### [ TaskFilter ]
+###  ↓ cambio de filtro
+### [ App.js ]
+###   ↓
+### [ TaskList ] → muestra:
+###   🔹 Todas
+###  🔹 Pendientes
+###  🔹 Completadas
 
 # 6️⃣ Estadísticas
-## [ App.js ] → calcula:
-##  🔹 Total
-##  🔹 Pendientes
-##  🔹 Completadas
-##  ↓
-## [ Contador visual ] en UI
+### [ App.js ] → calcula:
+###  🔹 Total
+###  🔹 Pendientes
+###  🔹 Completadas
+###  ↓
+### [ Contador visual ] en UI
 
