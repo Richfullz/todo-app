@@ -1,70 +1,155 @@
-# Getting Started with Create React App
+# 📝 To-Do List App - React
+## Una aplicación de tareas moderna hecha con React, con diseño de tarjetas, filtrado y estadísticas en tiempo real.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🔹 Funcionalidades
+##✅ Añadir tareas
+##✏️ Editar tareas directamente al hacer clic
+##✔️ Marcar tareas completadas
+##🗑️ Eliminar tareas con efecto visual
+##🔍 Filtrado: Todas / Pendientes / Completadas
+##📊 Estadísticas: Total, Pendientes y Completadas
+##🕒 Fechas visibles: Creación y última edición
 
-## Available Scripts
+# 🎨 Diseño
 
-In the project directory, you can run:
+## 🗂 Tarjetas de tareas
+### Fondo gris #bbb, bordes redondeados y sombra suave
+### Hover: fondo naranja claro #f3c9a0ff, escala y sombra más intensa
+### Texto blanco con sombra para legibilidad
+### Fecha en naranja #f29c45ff
+### Botón de eliminar rojo con efecto hover
+# 📝 Formulario de tareas
+### Tarjeta translúcida con blur
+### Botón azul con hover y transición suave
+# 🔧 Filtros y estadísticas
+### Tarjetas con fondo translúcido y sombreado
+### Colores diferenciados para botones y contadores
 
-### `npm start`
+# ⚡ Tecnologías
+### React 18
+### CSS moderno (flex, box-shadow, backdrop-filter, hover animado)
+### Responsive design
+### Fuentes modernas: Inter, sans-serif
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 🗂 Estructura de archivos
+# /src
+# ├─ App.js
+# ├─ TaskList.js        # Lista de tareas
+# ├─ TaskItem.js        # Componente de cada tarea
+# ├─ TaskForm.js        # Formulario para añadir tareas
+# ├─ TaskFilter.js      # Filtro de tareas
+# ├─ index.js
+# └─ styles.css         # Estilos globales y de componentes
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Imagenes del Proyecto
+### <img width="1920" height="932" alt="image" src="https://github.com/user-attachments/assets/5d0c5ab6-7648-4796-be8c-5d425a660f0b" />
+### <img width="1918" height="930" alt="image" src="https://github.com/user-attachments/assets/0d58e70b-d27a-4f46-bb6d-ba7a9abed9e2" />
+### <img width="1914" height="928" alt="image" src="https://github.com/user-attachments/assets/55ddaaea-76be-410a-928a-f86c609d8b47" />
 
-### `npm test`
+# ¿Como Funciona ToDoo-app?:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 1️⃣ App.js
+### Es el componente principal que maneja todo.
+### Guarda el estado de las tareas en un array (tasks).
+### Contiene las funciones para:
+### Añadir tareas (addTask)
+### Editar tareas (editTask)
+### Marcar tareas como completadas (toggleTask)
+### Eliminar tareas (deleteTask)
+### Renderiza los componentes: TaskForm, TaskFilter, TaskList, y las estadísticas.
 
-### `npm run build`
+## 2️⃣ TaskForm.js
+### Componente que muestra un formulario para añadir nuevas tareas.
+### Tiene un input controlado con estado local (taskText).
+### Al enviar el formulario (handleSubmit):
+### Llama a onAddTask pasado desde App.js
+### Limpia el input automáticamente.
+### Estilizado como tarjeta translúcida con blur y sombra.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 3️⃣ TaskList.js
+### Renderiza todas las tareas que recibe desde App.js.
+### Cada tarea se muestra usando TaskItem.
+### Se encarga solo de mapear el array de tareas y pasar props de acciones (editar, eliminar, marcar completada).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 4️⃣ TaskItem.js
+### Componente que representa una sola tarea:
+### Checkbox para marcar como completada
+### Texto de la tarea que se puede editar al hacer clic
+### Fecha de creación y última edición
+### Botón para eliminar
+### Tiene estado local (isEditing y editedText) para manejar la edición en línea.
+### Estilos:
+### Tarjeta gris con borde redondeado y sombra
+### Hover con fondo naranja y escala
+### Texto blanco con sombra, fecha en naranja
+### Botón de eliminar rojo con hover y borde
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 5️⃣ TaskFilter.js (opcional si lo tienes)
+### Permite filtrar las tareas: todas, pendientes o completadas.
+### Cambia la vista en TaskList según el filtro.
+### Botones con estilos distintos para cada estado activo.
 
-### `npm run eject`
+## 6️⃣ styles.css
+### Reset y fondo global: fuente Inter, fondo oscuro con patrón de cubos.
+### Estilos de componentes:
+### Formulario, filtros y listas como tarjetas con sombra y blur
+### Tarjetas de tareas: gris, hover naranja, texto con sombra, fecha destacada
+### Botón eliminar: rojo, efecto hover y borde
+### Tipografía moderna y legible, transiciones suaves para hover y animaciones de aparición (fadeIn).
+###  El usuario añade tareas en TaskForm → App.js actualiza el estado → TaskList muestra la nueva tarea.
+### Puede marcar tareas como completadas con el checkbox → App.js actualiza la tarea.
+### Puede editar texto al hacer clic sobre la tarea → TaskItem maneja edición en línea.
+### Puede eliminar tareas con el botón → TaskItem llama a App.js.
+### Filtros y estadísticas se actualizan automáticamente según el estado de las tareas.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# 🔹 Flujo de la aplicación
+# 1️⃣ Añadir tarea
+## [ TaskForm ]
+##  ↓ onAddTask()
+## [ App.js - tasks[] ] → se actualiza el estado
+##  ↓
+## [ TaskList ]
+##  ↓
+## [ TaskItem ] → nueva tarjeta aparece con animación
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 2️⃣ Editar tarea
+## [ TaskItem ]
+##  ↓ click en texto
+## [ Modo edición ]
+##  ↓ enter o blur
+## [ App.js - editTask() ]
+##  ↓
+## [ TaskList ] → se actualiza el texto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# 3️⃣ Marcar como completada
+## [ TaskItem ]
+##  ↓ check/uncheck
+## [ App.js - toggleTask() ]
+##  ↓
+## [ TaskList ] → estilo tachado + opacidad
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 4️⃣ Eliminar tarea
+## [ TaskItem ]
+##  ↓ click en 🗑️
+## [ App.js - deleteTask() ]
+##  ↓
+## [ TaskList ] → tarjeta desaparece
 
-## Learn More
+# 5️⃣ Filtrar tareas
+## [ TaskFilter ]
+##  ↓ cambio de filtro
+## [ App.js ]
+##   ↓
+## [ TaskList ] → muestra:
+##   🔹 Todas
+##  🔹 Pendientes
+##  🔹 Completadas
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# 6️⃣ Estadísticas
+## [ App.js ] → calcula:
+##  🔹 Total
+##  🔹 Pendientes
+##  🔹 Completadas
+##  ↓
+## [ Contador visual ] en UI
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
