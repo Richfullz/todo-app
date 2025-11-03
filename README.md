@@ -46,7 +46,7 @@
 ### <img width="1918" height="930" alt="image" src="https://github.com/user-attachments/assets/0d58e70b-d27a-4f46-bb6d-ba7a9abed9e2" />
 ### <img width="1914" height="928" alt="image" src="https://github.com/user-attachments/assets/55ddaaea-76be-410a-928a-f86c609d8b47" />
 
-# ¿Como Funciona ToDoo-app?:
+# 🛠️ Cómo funciona la aplicación
 
 ## 1️⃣ App.js
 ### Es el componente principal que maneja todo.
