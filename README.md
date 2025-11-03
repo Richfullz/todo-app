@@ -1,5 +1,5 @@
 # 📝 To-Do List App - React
-## Una aplicación de tareas moderna hecha con React, con diseño de tarjetas, filtrado y estadísticas en tiempo real.
+### Una aplicación de tareas moderna hecha con React, con diseño de tarjetas, filtrado y estadísticas en tiempo real.
 
 # 🔹 Funcionalidades
 ### ✅ Añadir tareas
