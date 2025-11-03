@@ -48,11 +48,9 @@ function App() {
       element.classList.add("removing");
       setTimeout(() => {
         setTasks(tasks.filter((task) => task.id !== id));
-      }, 300); // coincide con duración de la animación
+      }, 300);
     }
   };
-
-
 
   // 🔍 Lógica de filtrado + búsqueda
   const filteredTasks = tasks.filter((task) => {
@@ -72,10 +70,6 @@ function App() {
   const totalTasks = tasks.length;
   const completedTasks = tasks.filter(task => task.completed).length;
   const pendingTasks = totalTasks - completedTasks;
-
-  // Orden de tareas
-  const sortedTasks = [...filteredTasks].sort((a, b) => a.completed - b.completed);
-
 
   return (
     <div className="app">
